@@ -1,13 +1,12 @@
 module Grocer
 
   class Level
-    attr_reader :text, :produce, :points_to_score, :time, :number_of_items
+    attr_reader :text, :produce, :speed, :number_of_items
 
-    def initialize(text, produce, points_to_score, time, number_of_items)
+    def initialize(text, produce, time, number_of_items)
       @text = text
       @produce = produce
-      @points_to_score = points_to_score
-      @time = time
+      @speed = speed
       @number_of_items = number_of_items
       @checkout_items = []
       @number_of_items.times do
@@ -47,4 +46,7 @@ tomatoes = Produce.new("tomatoes", "assets/tomatoes.png", "")
 cherries = Produce.new("cherries", "assets/cherries.png", "")
 
 
-level1 = Level.new("So, this is your first day working at my supermarket. I guess I'll go easy on you.", [banana, orange], 20, 120, 10) 
+level1 = Level.new("So, this is your first day working at my supermarket. I guess I'll go easy on you.", [banana, orange], 2, 10)
+level2 = Level.new("So you still want to work here? Ok. We've gotten some new items in stock, finally.", [banana, orange, apple, potatoes], 2, 20)
+level3 = Level.new("One of our best workers quit yesterday. You're going to have to start picking up the slack!", [banana, orange, apple, potatoes, 4, 30)
+  

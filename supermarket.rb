@@ -22,6 +22,7 @@ class GroceryWindow < Gosu::Window
   end
 
   def button_down id
+   if id == Gosu::KbEscape then exit end
    if id == Gosu::KbReturn
      check_code
      @nums = [] 
